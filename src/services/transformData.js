@@ -12,3 +12,10 @@ export function transformTaskData(data) {
     owner: item.email || "unknown"
   }));
 }
+
+export function transformMetricData(data) {
+  return data.map(item => ({
+    label: item.name || item.title,
+    value: item.value || 0
+  }));
+}
